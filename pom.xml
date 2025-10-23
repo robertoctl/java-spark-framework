@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>demo</groupId>
+    <artifactId>spark-mustache-demo</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+    </properties>
+
+    <dependencies>
+        <!-- Spark Java (web framework) -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+
+        <!-- Mustache template engine for Spark -->
+        <dependency>
+            <groupId>com.sparkjava</groupId>
+            <artifactId>spark-template-mustache</artifactId>
+            <version>2.7.1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Run with: mvn -q exec:java -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <mainClass>com.techready.javaspark.App</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
